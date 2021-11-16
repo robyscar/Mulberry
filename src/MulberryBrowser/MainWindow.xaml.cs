@@ -106,6 +106,14 @@ namespace BROWSER
         {
             // LoadWebPages(WebPages[0]);
 
+
+
+            // https://www.computerhope.com/shortcut/chrome.htm
+
+            // workaround
+            // Spacebar	Moves down a page at a time.
+
+
             // https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.sendkeys?redirectedfrom=MSDN&view=netframework-4.7.2
 
             // SendKeys.Send("{PGDN}");
@@ -117,7 +125,7 @@ namespace BROWSER
             // And then use it to send key input like so:
             // 
 
-            
+
             // var simulator = new InputSimulator();
             var sim = new WindowsInput.InputSimulator();    /// !!
 
@@ -134,7 +142,7 @@ namespace BROWSER
 
             
 
-            for (i = 0; i < 30; i++)
+            for (i = 0; i < 100; i++)
             {
 
                 /// DOWN ARROW key
