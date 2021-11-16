@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,9 +36,9 @@ namespace BROWSER
 
         void GoHome()
         {
-            area.Text = "www.google.com";
-            chrome.Address = "www.google.com";
-            WebPages.Add("www.google.com");
+            area.Text = "www.linkedin.com";
+            chrome.Address = "www.linkedin.com";
+            WebPages.Add("www.linkedin.com");
         }
 
         void LoadWebPages(string Link, bool addToList = true)
