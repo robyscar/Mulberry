@@ -8,11 +8,13 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+// using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CefSharp.Wpf;
+using GregsStack.InputSimulatorStandard;
 
 namespace BROWSER
 {
@@ -81,6 +83,11 @@ namespace BROWSER
             }
         }
 
+//         public void PressPageDown()
+//         {
+//             InputSimulator.SimulateKeyPress(VirtualKeyCode.PGDN);
+//         }
+
         //back forw btns
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -97,7 +104,39 @@ namespace BROWSER
         //home
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            LoadWebPages(WebPages[0]);
+            // LoadWebPages(WebPages[0]);
+
+            // https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.sendkeys?redirectedfrom=MSDN&view=netframework-4.7.2
+
+            // SendKeys.Send("{PGDN}");
+
+
+            // https://www.reddit.com/r/csharp/comments/9dyf0t/having_my_program_send_an_enter_key_press/
+
+            // Install - Package InputSimulator
+            // And then use it to send key input like so:
+            // 
+
+            // var sim = new WindowsInput.InputSimulator();
+            // sim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.PGDN);
+
+            var simulator = new InputSimulator();
+            uint i = 0; // initialization >> max 4294967295
+
+  //          while (i < 100) // condition
+  //          {
+  //              WindowsInput.Native.VirtualKeyCode.DOWN;
+  //              i++; // increment
+  //          }
+  //
+            for ( i = 0; i < 100; i++)
+            {
+                
+                simulator.Keyboard.KeyPress(GregsStack.InputSimulatorStandard.Native.VirtualKeyCode.DOWN);
+            }
+
+
+
         }
 
         private void MenuClicked(object sender, RoutedEventArgs e)
