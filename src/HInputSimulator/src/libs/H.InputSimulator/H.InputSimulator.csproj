@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net4.0;net4.5;netstandard2.0;netstandard1.1</TargetFrameworks>
+    <RootNamespace>WindowsInput</RootNamespace>
+    <NoWarn>$(NoWarn);CA1707;CA1720;CA1712;CA1069;CA5392</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <Description>Allows you to simulate global mouse and keyboard events.
+Features:
+- Supports scan codes and multi-language input.
+- Supports WPF/WinForms/Console windows apps.
+- Supports .NET Standard, .Net Core and .Net 5/6.
+
+Supported OS:
+- Windows
+    </Description>
+    <PackageTags>simulate, keyboard, mouse, input, netcore, netstandard, net5, net6</PackageTags>
+  </PropertyGroup>
+
+</Project>

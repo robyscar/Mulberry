@@ -38,9 +38,9 @@ namespace BROWSER
 
         void GoHome()
         {
-            area.Text = "www.linkedin.com";
-            chrome.Address = "www.linkedin.com";
-            WebPages.Add("www.linkedin.com");
+            area.Text = "https://www.linkedin.com/in/robertoscaramuzza/detail/recent-activity/";
+            chrome.Address = "https://www.linkedin.com/in/robertoscaramuzza/detail/recent-activity/";
+            WebPages.Add("https://www.linkedin.com/in/robertoscaramuzza/detail/recent-activity/");
         }
 
         void LoadWebPages(string Link, bool addToList = true)
@@ -117,27 +117,45 @@ namespace BROWSER
             // And then use it to send key input like so:
             // 
 
-            // var sim = new WindowsInput.InputSimulator();
-            // sim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.PGDN);
+            
+            // var simulator = new InputSimulator();
+            var sim = new WindowsInput.InputSimulator();    /// !!
 
-            var simulator = new InputSimulator();
+            
             uint i = 0; // initialization >> max 4294967295
 
-  //          while (i < 100) // condition
-  //          {
-  //              WindowsInput.Native.VirtualKeyCode.DOWN;
-  //              i++; // increment
-  //          }
-  //
-            for ( i = 0; i < 100; i++)
+            //          while (i < 100) // condition
+            //          {
+            //              WindowsInput.Native.VirtualKeyCode.DOWN;
+            //              i++; // increment
+            //          }
+            //
+            // HERE!
+
+            
+
+            for (i = 0; i < 30; i++)
             {
-                
-                simulator.Keyboard.KeyPress(GregsStack.InputSimulatorStandard.Native.VirtualKeyCode.DOWN);
+
+                /// DOWN ARROW key
+                /// DOWN = 0x28,
+                // simulator.Keyboard.KeyPress(GregsStack.InputSimulatorStandard.Native.VirtualKeyCode.DOWN);
+
+
+                /// PAGE DOWN key
+                /// NEXT = 0x22,
+                /// 
+                /// page down	34
+                /// does NOT works
+
+                // simulator.Keyboard.KeyPress(GregsStack.InputSimulatorStandard.Native.VirtualKeyCode.NEXT); // working
+
+                // sim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.PGDN);
+
+                sim.Keyboard.KeyPress(WindowsInput.Native.VirtualKeyCode.SPACE);      /// !!
             }
 
-
-
-        }
+        }                                                                                                                                                                                                                                                                                      
 
         private void MenuClicked(object sender, RoutedEventArgs e)
         {
