@@ -1,7 +1,18 @@
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using CefSharp.Wpf;
 
 namespace BROWSER
 {
@@ -86,16 +97,7 @@ namespace BROWSER
         //home
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            //  LoadWebPages(WebPages[0]);
-
-            // var sim = new WindowsInput.InputSimulator();
-
-#pragma warning disable CS0433 // The type 'InputSimulator' exists in both 'H.InputSimulator, Version=1.2.1.0, Culture=neutral, PublicKeyToken=603f13207e65c17b' and 'WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad'
-            var sim = new InputSimulator();
-#pragma warning restore CS0433 // The type 'InputSimulator' exists in both 'H.InputSimulator, Version=1.2.1.0, Culture=neutral, PublicKeyToken=603f13207e65c17b' and 'WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad'
-#pragma warning disable CS0433 // The type 'VirtualKeyCode' exists in both 'H.InputSimulator, Version=1.2.1.0, Culture=neutral, PublicKeyToken=603f13207e65c17b' and 'WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad'
-            sim.Keyboard.KeyPress(VirtualKeyCode.PGDN);
-#pragma warning restore CS0433 // The type 'VirtualKeyCode' exists in both 'H.InputSimulator, Version=1.2.1.0, Culture=neutral, PublicKeyToken=603f13207e65c17b' and 'WindowsInput, Version=1.0.4.0, Culture=neutral, PublicKeyToken=9b287f7dc5073cad'
+            LoadWebPages(WebPages[0]);
         }
 
         private void MenuClicked(object sender, RoutedEventArgs e)
